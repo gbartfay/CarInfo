@@ -4,7 +4,7 @@ import javax.inject.Inject;
 
 import hu.bme.aut.amorg.examples.mvpstart.MVPApplication;
 import hu.bme.aut.amorg.examples.mvpstart.interactor.StringInteractor;
-import hu.bme.aut.amorg.examples.mvpstart.view.MainView;
+import bme.hu.carinfo.view.MainView;
 
 /**
  * Created by mobsoft on 2016. 04. 11..
