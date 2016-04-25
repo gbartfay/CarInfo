@@ -4,13 +4,12 @@ import android.content.Context;
 
 import javax.inject.Singleton;
 
+import bme.hu.carinfo.presenter.MainPresenter;
 import dagger.Module;
 import dagger.Provides;
-import bme.hu.carinfo.presenter.MainPresenter;
 
-/**
- * Created by mobsoft on 2016. 04. 11..
- */
+
+
 @Module
 public class ViewModule {
     private Context context;

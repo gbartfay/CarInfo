@@ -7,12 +7,9 @@ public class MyDataModel {
 
     private int idx = 0;
 
-    public String getNextString() {
+    public String getNextData() {
         String[] list = {
-                "ecc", "pecc", "kimehetsz",
-                "holnapután", "bejöhetsz",
-                "cérnára", "cinegére",
-                "ugorj", "cica", "az", "egérre", "fuss!"
+                "Audi", "Honda", "BMW"
         };
 
         if (idx == list.length) {

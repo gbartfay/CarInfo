@@ -9,11 +9,11 @@ import bme.hu.carinfo.view.ViewModule;
  */
 public class MyApplication extends Application {
 
-    public static MVPApplicationComponent injector;
+    public static MyApplicationComponent injector;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        injector = DaggerMVPApplicationComponent.builder().viewModule(new ViewModule(this)).build();
+        injector = DaggerMyApplicationComponent.builder().viewModule(new ViewModule(this)).build();
     }
 }

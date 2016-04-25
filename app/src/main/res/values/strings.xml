@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CarInfo</string>
+    <string name="app_name">MVPStart</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn">Katt</string>
 </resources>

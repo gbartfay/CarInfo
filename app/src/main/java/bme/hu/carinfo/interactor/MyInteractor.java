@@ -2,7 +2,7 @@ package bme.hu.carinfo.interactor;
 
 import javax.inject.Inject;
 
-import hu.bme.aut.amorg.examples.mvpstart.MVPApplication;
+import bme.hu.carinfo.MyApplication;
 import bme.hu.carinfo.model.MyDataModel;
 
 /**
@@ -13,10 +13,10 @@ public class MyInteractor {
     MyDataModel model;
 
     public MyInteractor() {
-        MVPApplication.injector.inject(this);
+        MyApplication.injector.inject(this);
     }
 
     public String getString() {
-        return model.getNextString();
+        return model.getNextData();
     }
 }

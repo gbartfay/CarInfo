@@ -2,13 +2,10 @@ package bme.hu.carinfo.presenter;
 
 import javax.inject.Inject;
 
+import bme.hu.carinfo.MyApplication;
 import bme.hu.carinfo.interactor.MyInteractor;
-import hu.bme.aut.amorg.examples.mvpstart.MVPApplication;
 import bme.hu.carinfo.view.MainView;
 
-/**
- * Created by mobsoft on 2016. 04. 11..
- */
 
 public class MainPresenter extends Presenter<MainView> {
 
@@ -16,7 +13,7 @@ public class MainPresenter extends Presenter<MainView> {
     public MyInteractor interactor;
 
     public MainPresenter() {
-        MVPApplication.injector.inject(this);
+        MyApplication.injector.inject(this);
     }
 
     public void doStuff() {
