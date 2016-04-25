@@ -5,6 +5,7 @@ import javax.inject.Singleton;
 import bme.hu.carinfo.interactor.InteractorModule;
 import bme.hu.carinfo.interactor.MyInteractor;
 import bme.hu.carinfo.model.ModelModule;
+import bme.hu.carinfo.presenter.BrandListPresenter;
 import bme.hu.carinfo.presenter.MainPresenter;
 import bme.hu.carinfo.view.MainActivity;
 import bme.hu.carinfo.view.ViewModule;
@@ -20,4 +21,6 @@ public interface MyApplicationComponent {
         void inject(MainPresenter mainPresenter);
 
         void inject(MyInteractor stringInteractor);
+
+        void inject(BrandListPresenter brandListPresenter);
 }

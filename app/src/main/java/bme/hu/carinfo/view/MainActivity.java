@@ -1,6 +1,7 @@
 
 package bme.hu.carinfo.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,8 +29,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
+
 
         MyApplication.injector.inject(this);
 
@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
             @Override
             public void onClick(View v) {
-                mainPresenter.doStuff();
+                //mainPresenter.doStuff();
+                Intent intent = new Intent(getApplicationContext(), BrandListActivity.class);
+                startActivity(intent);
             }
         });
     }
