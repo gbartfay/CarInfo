@@ -1,11 +1,15 @@
 package bme.hu.carinfo.model;
 
+import bme.hu.carinfo.MyApplication;
+
 /**
  * Created by mobsoft on 2016. 04. 11..
  */
-public class MyDataModel {
+    public class MyDataModel {
 
-    private int idx = 0;
+    //db hivas lesz majd itt
+
+    protected int idx = 0;
 
     public String getNextData() {
         String[] list = {
@@ -17,5 +21,7 @@ public class MyDataModel {
         }
         return list[idx++];
     }
+
+
 }
 

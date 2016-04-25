@@ -1,14 +1,16 @@
 package bme.hu.carinfo.model;
 
-import bme.hu.carinfo.model.MyDataModel;
 import dagger.Module;
 import dagger.Provides;
 
-
+/**
+ * Created by mobsoft on 2016. 04. 25..
+ */
 @Module
-public class ModelModule {
+public class MockModelModule  {
+
     @Provides
     public MyDataModel getMyDataModel() {
-        return new MyDataModel();
+        return new MockDataModel();
     }
 }

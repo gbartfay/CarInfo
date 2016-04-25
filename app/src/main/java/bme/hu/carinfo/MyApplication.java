@@ -14,6 +14,11 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        injector = DaggerMyApplicationComponent.builder().viewModule(new ViewModule(this)).build();
+        if (BuildConfig.FLAVOR.equals("mock")) {
+            injector = DaggerMockMyApplicationComponent.builder().viewModule(new ViewModule(this)).build();
+        } else {
+            injector = DaggerMyApplicationComponent.builder().viewModule(new ViewModule(this)).build();
+        }
+
     }
 }

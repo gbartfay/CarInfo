@@ -18,7 +18,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        production {
+            applicationId "bme.hu.carinfo.production"
+            buildConfigField 'String', 'FLAVOUR', '"production"'
+        }
+        mock {
+            applicationId "bme.hu.carinfo.mock"
+            buildConfigField 'String', 'FLAVOUR', '"mock"'
+        }
+    }
 }
+
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

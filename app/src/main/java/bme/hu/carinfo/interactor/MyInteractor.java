@@ -12,6 +12,7 @@ public class MyInteractor {
     @Inject
     MyDataModel model;
 
+
     public MyInteractor() {
         MyApplication.injector.inject(this);
     }
