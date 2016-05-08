@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".view.BrandListActivity">
         </activity>
+        <meta-data android:name="DATABASE" android:value="carinfo.db" />
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="bme.hu.carinfo" />
     </application>
 
 </manifest>
