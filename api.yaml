@@ -1,0 +1,191 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: CarInfo API
+  description: CarInfo API des
+  version: "1.0.0"
+# the domain of the service
+host: api.carinfo.com
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /brands:
+    get:
+      summary: Get car brands
+      description: Returns the brands of the cars.
+      tags:
+        - Brands
+      responses:
+        200:
+          description: An array of brands
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Brand'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+            
+  /models:
+    get:
+      summary: Get car models
+      description: Returns the models of the cars.
+      parameters:
+        - name: brand
+          in: query
+          description: selected brand name
+          required: true
+          type: string
+      tags:
+        - Brands
+      responses:
+        200:
+          description: An array of brands
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Model'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+  /details:
+    get:
+      summary: Get car details
+      description: Returns the details of the car model.
+      parameters:
+        - name: brand
+          in: query
+          description: selected brand name
+          required: true
+          type: string
+        - name: model
+          in: query
+          description: selected model name
+          required: true
+          type: string
+      tags:
+        - detail
+      responses:
+        200:
+          description: An array of brands
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Car'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: add car 
+      description: |
+        post a new car
+      parameters:
+        - name: car
+          in: query
+          description: car
+          required: true
+          type: string
+      tags:
+        - detail
+      responses:
+        200:
+          description: success
+
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    delete:
+      summary: delete car 
+      description: |
+        delete a car
+      parameters:
+        - name: brand
+          in: query
+          description: Brand
+          required: true
+          type: string
+        - name: model
+          in: query
+          description: selected model name
+          required: true
+          type: string
+      tags:
+        - detail
+      responses:
+        200:
+          description: success
+
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+
+definitions:
+  Car:
+    type: object
+    properties:
+      brand:
+        type: string
+        description: Brand name
+      model:
+        type: string
+        description: Model name
+      year:
+        type: integer
+        format: int32
+        description: Year of production
+      engine:
+        type: string
+        description: Engine description
+      weight:
+        type: integer
+        format: int32
+        description: Weight of the car
+      power:
+        type: integer
+        format: int32
+        description: Power of the car
+      doors:
+        type: integer
+        format: int32
+        description: Number of doors
+      fuel:
+        type: string
+        description: Fuel type
+  
+  Error:
+    type: object
+    properties:
+      message:
+        type: string
+        description: Error message
+        
+  Brand:
+    type: object
+    properties:
+      name:
+        type: string
+        description: name of brand
+        
+  Model:
+    type: object
+    properties:
+      name:
+        type: string
+        description: name of model
+
+        
+  
