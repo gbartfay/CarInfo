@@ -60,7 +60,7 @@ public class CarUnitTest {
         if (BuildConfig.FLAVOR == "mock") {
             Car n = new Car();
             interactor.addPersonToNetwork(n);
-            List<Person> p = interactor.getPeopleFromNetwork();
+            List<Car> p = interactor.getPeopleFromNetwork();
             assertEquals(p.get(1).getName(), PeopleMock.testP1.getName());
             assertEquals(p.get(2).getName(), PeopleMock.testP2.getName());
             assertEquals(p.get(0).getName(), n.getName());
