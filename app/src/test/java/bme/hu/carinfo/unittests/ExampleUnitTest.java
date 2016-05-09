@@ -1,4 +1,6 @@
-package bme.hu.carinfo;
+package bme.hu.carinfo.unittests;
+
+import bme.hu.carinfo.model.sugarorm.Car;
 
 import org.junit.Test;
 
@@ -11,5 +13,9 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
+
+        String name = "lala";
+        Person p = new Car();
+        assertEquals(p.getName().equals(name), true);
     }
 }

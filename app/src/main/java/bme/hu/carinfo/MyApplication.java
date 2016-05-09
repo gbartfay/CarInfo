@@ -21,4 +21,9 @@ public class MyApplication extends Application {
         }
 
     }
+
+    public void setInjector(MyApplicationComponent appComponent) {
+        injector = appComponent;
+        injector.inject(this);
+    }
 }

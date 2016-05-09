@@ -38,4 +38,6 @@ public interface MyApplicationComponent {
         void inject(ModelListPresenter modelListPresenter);
 
         void inject(DetailPresenter detailPresenter);
+
+        void inject(MyApplication app);
 }
