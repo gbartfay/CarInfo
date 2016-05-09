@@ -15,7 +15,7 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
 
         String name = "lala";
-        Person p = new Car();
+        Car p = new Car();
         assertEquals(p.getName().equals(name), true);
     }
 }
