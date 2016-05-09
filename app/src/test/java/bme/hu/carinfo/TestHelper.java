@@ -1,7 +1,7 @@
 package bme.hu.carinfo;
 
-import bme.hu.carinfo.SugarAppApplication;
-import bme.hu.carinfo.SugarAppApplicationComponent;
+import bme.hu.carinfo.MyApplication;
+import bme.hu.carinfo.MyApplicationComponent;
 
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowLog;
