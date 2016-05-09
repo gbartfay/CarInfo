@@ -40,7 +40,7 @@ public class CarUnitTest {
     @Test
     public void getterTest() throws Exception {
         String name = "lala";
-        Person p = new Person(name);
+        Car p = new Car();
         assertEquals(p.getName().equals(name), true);
     }
 
