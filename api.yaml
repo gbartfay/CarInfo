@@ -45,7 +45,7 @@ paths:
           required: true
           type: string
       tags:
-        - models
+        - Models
       responses:
         200:
           description: An array of brands
