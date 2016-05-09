@@ -3,9 +3,9 @@ package bme.hu.carinfo.unittests;
 
 import bme.hu.carinfo.BuildConfig;
 import bme.hu.carinfo.RobolectricDaggerTestRunner;
-import bme.hu.carinfo.DaggerMockSugarAppApplicationComponent;
-import bme.hu.carinfo.MockSugarAppApplicationComponent;
-import bme.hu.carinfo.SugarAppApplication;
+import bme.hu.carinfo.DaggerMockMyApplicationComponent;
+import bme.hu.carinfo.MockMyApplicationComponent;
+import bme.hu.carinfo.MyApplication;
 import bme.hu.carinfo.PeopleInteractor;
 import bme.hu.carinfo.model.sugarorm.Car;
 import bme.hu.carinfo.network.mock.DetailMock;
