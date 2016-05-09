@@ -20,7 +20,7 @@ import okhttp3.Response;
 
 public class DetailMock {
 
-    static List<Car> peopleList = new ArrayList<>();
+    static List<Car> carList = new ArrayList<>();
     static boolean isInitialised = false;
 
     public static Car testP1 = new Car();
@@ -35,16 +35,16 @@ public class DetailMock {
 
         if (uri.getPath().equals(NetworkConfig.ENDPOINT_PREFIX + "details") && request.method().equals("GET")) {
             if (!isInitialised) {
-                peopleList.add(testP1);
-                peopleList.add(testP2);
+                carList.add(testP1);
+                carList.add(testP2);
                 isInitialised = true;
             }
-            responseString = GsonHelper.getGson().toJson(peopleList);
+            responseString = GsonHelper.getGson().toJson(carList);
             responseCode = 200;
         } else if (uri.getPath().startsWith(NetworkConfig.ENDPOINT_PREFIX + "models") && request.method().equals("GET")) {
             int startOfData = uri.getPath().lastIndexOf('/');
             String name = uri.getPath().substring(startOfData + 1);
-            peopleList.add(new Car());
+            carList.add(new Car());
 
             responseString = "";
             responseCode = 200;
@@ -57,7 +57,7 @@ public class DetailMock {
     }
 
     public static void resetList() {
-        peopleList.clear();
+        carList.clear();
         isInitialised = false;
     }
 }

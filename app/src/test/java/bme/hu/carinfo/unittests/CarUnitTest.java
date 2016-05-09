@@ -26,7 +26,7 @@ import static org.junit.Assert.*;
 
 @RunWith(RobolectricDaggerTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 21)
-public class PersonUnitTest {
+public class CarUnitTest {
 
     @Inject
     public PeopleInteractor interactor;
