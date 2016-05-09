@@ -14,5 +14,5 @@ import dagger.Component;
  */
 @Singleton
 @Component(modules = {MockNetworkModule.class, TestModule.class, InteractorModule.class})
-public interface TestComponent extends SugarAppApplicationComponent {
+public interface TestComponent extends MyApplicationComponent {
 }
