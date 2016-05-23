@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
             @Override
             public void onClick(View v) {
                 //mainPresenter.doStuff();
+//                throw new RuntimeException("The CarInfo app has crashed to test the Fabric! Good luck!");
                 Intent intent = new Intent(getApplicationContext(), BrandListActivity.class);
                 startActivity(intent);
             }

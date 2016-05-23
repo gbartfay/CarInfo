@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".view.BrandListActivity">
         </activity>
+        <activity android:name=".view.ModelListActivity">
+        </activity>
         <meta-data android:name="DATABASE" android:value="carinfo.db" />
         <meta-data android:name="VERSION" android:value="2" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
