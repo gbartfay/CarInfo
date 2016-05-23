@@ -21,8 +21,8 @@ public class ModelInteractor {
     @Inject
     MyDataModel model;
 
-    @Inject
-    ModelsApi modelAPI;
+   // @Inject
+   // ModelsApi modelAPI;
 
 
     public ModelInteractor() {
@@ -37,16 +37,16 @@ public class ModelInteractor {
     public List<Model> getModelFromNetwork(String brand) throws Exception {
         Response<List<Model>> response = null;
 
-        Call<List<Model>> call = modelAPI.modelsGet(brand);
-        try {
-            response = call.execute();
-        } catch (Exception e) {
-            throw new Exception("Network error on execute with get!");
-        }
-        if (response.code() != 200) {
-            throw new Exception("Network error with get!");
-        }
-
-        return response.body();
+//        Call<List<Model>> call = modelAPI.modelsGet(brand);
+//        try {
+//            response = call.execute();
+//        } catch (Exception e) {
+//            throw new Exception("Network error on execute with get!");
+//        }
+//        if (response.code() != 200) {
+//            throw new Exception("Network error with get!");
+//        }
+//
+       return response.body();
     }
 }

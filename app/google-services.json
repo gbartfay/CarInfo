@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "408415836714",
+    "project_id": "carinfo-ce057"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408415836714:android:9ad18b7b2cf4f439",
+        "android_client_info": {
+          "package_name": "bme.hu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoTxyVFimLmi3kwgxJFL6PJu4fgsLog-M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-78162956-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408415836714:android:e871ff6102f454ff",
+        "android_client_info": {
+          "package_name": "bme.hu.carinfo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoTxyVFimLmi3kwgxJFL6PJu4fgsLog-M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-78162956-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -19,8 +19,9 @@ public class BrandInteractor {
     @Inject
     MyDataModel model;
 
-    @Inject
-    BrandsApi brandAPI;
+   // @Inject
+   // BrandsApi brandAPI;
+
 
 
     public BrandInteractor() {
@@ -35,16 +36,16 @@ public class BrandInteractor {
     public List<Brand> getBrandFromNetwork() throws Exception {
         Response<List<Brand>> response = null;
 
-        Call<List<Brand>> call = brandAPI.brandsGet();
-        try {
-            response = call.execute();
-        } catch (Exception e) {
-            throw new Exception("Network error on execute with get!");
-        }
-        if (response.code() != 200) {
-            throw new Exception("Network error with get!");
-        }
-
-        return response.body();
+//        Call<List<Brand>> call = brandAPI.brandsGet();
+//        try {
+//            response = call.execute();
+//        } catch (Exception e) {
+//            throw new Exception("Network error on execute with get!");
+//        }
+//        if (response.code() != 200) {
+//            throw new Exception("Network error with get!");
+//        }
+//
+       return response.body();
     }
 }

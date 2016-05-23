@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 import javax.inject.Inject;
 
 import bme.hu.carinfo.MyApplication;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @Inject
     MainPresenter mainPresenter;
+    private Tracker mTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements MainView {
                 startActivity(intent);
             }
         });
+
+        // Obtain the shared Tracker instance.
+        MyApplication application = (MyApplication) getApplication();
+        mTracker = application.getDefaultTracker();
     }
 
     @Override
@@ -90,5 +98,13 @@ public class MainActivity extends AppCompatActivity implements MainView {
     @Override
     public void showString(String s) {
         ((TextView)findViewById(R.id.tvPrint)).setText(s);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Log.i(TAG, "Setting screen name: " + name);
+        mTracker.setScreenName("MainActivity");
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 }

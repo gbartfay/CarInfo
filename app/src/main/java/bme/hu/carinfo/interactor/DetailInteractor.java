@@ -18,8 +18,8 @@ public class DetailInteractor {
     @Inject
     MyDataModel model;
 
-    @Inject
-    DetailApi detailAPI;
+  //  @Inject
+ //   DetailApi detailAPI;
 
 
 
@@ -34,31 +34,31 @@ public class DetailInteractor {
     public void addCarToNetwork(Car toAdd) throws Exception {
         Response response = null;
 
-        Call call = detailAPI.detailsPost(toAdd.getBrand());
-        try {
-            response = call.execute();
-        } catch (Exception e) {
-            throw new Exception("Network error on execute with post!");
-        }
-        if (response.code() != 200) {
-            throw new Exception("Network error with post!");
-        }
+//        Call call = detailAPI.detailsPost(toAdd.getBrand());
+//        try {
+//            response = call.execute();
+//        } catch (Exception e) {
+//            throw new Exception("Network error on execute with post!");
+//        }
+//        if (response.code() != 200) {
+//            throw new Exception("Network error with post!");
+//        }
     }
 
 
     public List<Car> getCarFromNetwork() throws Exception {
         Response<List<Car>> response = null;
 
-        Call<List<Car>> call = detailAPI.detailsGet("brand", "model");
-        try {
-            response = call.execute();
-        } catch (Exception e) {
-            throw new Exception("Network error on execute with get!");
-        }
-        if (response.code() != 200) {
-            throw new Exception("Network error with get!");
-        }
-
+//        Call<List<Car>> call = detailAPI.detailsGet("brand", "model");
+//        try {
+//            response = call.execute();
+//        } catch (Exception e) {
+//            throw new Exception("Network error on execute with get!");
+//        }
+//        if (response.code() != 200) {
+//            throw new Exception("Network error with get!");
+//        }
+//
         return response.body();
     }
 }
